@@ -45,6 +45,16 @@ def thruster_ctrl_msg():
     msg.effort = []
     return msg
 
+def velocity_ctrl_msg():
+    global actuator_vel
+    velocity_command = JointState()
+    velocity_command.header = Header()
+    velocity_command.name = ['velocity_command']
+    velocity_command.position = []
+    velocity_command.velocity = [actuator_vel]
+    velocity_command.effort = []
+    return velocity_command
+
 def verify_result():
     global target_distance
     global result
@@ -70,6 +80,7 @@ def talker_ctrl():
     # publishes to thruster and rudder topics
     pub_motor = rospy.Publisher('thruster_command', JointState, queue_size=10)
     pub_rudder = rospy.Publisher('joint_setpoint', JointState, queue_size=10)
+    pub_velocity = rospy.Publisher('velocity_command', JointState, queue_size=10)
     pub_result = rospy.Publisher('move_usv/result', Float64, queue_size=10)
     
     # subscribe to state and targer point topics
@@ -80,6 +91,7 @@ def talker_ctrl():
         try:  
             pub_motor.publish(thruster_ctrl_msg())
             pub_rudder.publish(rudder_ctrl_msg())
+            pub_velocity.publish(velocity_ctrl_msg())
             pub_result.publish(verify_result())
             rate.sleep()
         except rospy.ROSInterruptException:
@@ -147,7 +159,7 @@ def rudder_ctrl():
     elif target_distance < f_distance:
         actuator_vel = 0 
     else:
-	actuator_vel = 200
+	    actuator_vel = 200
         
     if err > 180:
         err = 180

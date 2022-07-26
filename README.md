@@ -47,7 +47,7 @@ To run the packages of usv_sim you need a catkin workspace. If you already have 
 Clone the usv_sim repository in the src folder of your catkin workspace:
 
         cd ~/catkin_ws/src
-        git clone https://github.com/disaster-robotics-proalertas/usv_sim_lsa.git
+        git clone https://github.com/jasonjabbour/usv_sim_lsa.git
         cd usv_sim_lsa
         git submodule init
         git submodule update

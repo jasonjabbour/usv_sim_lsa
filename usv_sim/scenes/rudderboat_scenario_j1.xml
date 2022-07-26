@@ -6,7 +6,7 @@
   <oceanState>
     <windx> 1.0 </windx>
     <windy> 1.0 </windy>
-    <windSpeed> 3.2 </windSpeed>
+    <windSpeed> 3.0 </windSpeed>
     <depth> 10000 </depth>
     <reflectionDamping> 0.35 </reflectionDamping>
     <waveScale> 1e-7 </waveScale>
@@ -23,9 +23,9 @@
       </color>
     </fog>
     <color>
-        <r>0.55</r>
-        <g>0.45</g>
-        <b>0.33</b>
+        <r>0.26</r>
+        <g>0.56</g>
+        <b>0.86</b>
     </color>
     <attenuation>
       <r>0.15</r>
@@ -85,7 +85,7 @@
 
 	<object>
     <name>terrain</name>
-    <file>terrain/diluvio5/novo4.obj</file>
+    <file>terrain/shipwreck/terrain.obj</file>
     <position>
       <x> 0</x>
       <y> 558 </y>
