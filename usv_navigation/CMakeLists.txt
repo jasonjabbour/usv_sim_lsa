@@ -32,6 +32,9 @@ install(DIRECTORY maps/
 install(DIRECTORY param/
    DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/param)
 
+install(DIRECTORY nta_rl_data_collection/
+   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/nta_rl_data_collection)
+
 install(DIRECTORY scripts/
    DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/scripts
    FILES_MATCHING PATTERN "*" 

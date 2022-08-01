@@ -26,3 +26,6 @@
 	path = freefloating_gazebo_resources/freefloating_gazebo
 	url = https://github.com/disaster-robotics-proalertas/freefloating_gazebo.git
 	branch = usv_sim
+[submodule "usv_navigation/nta_rl_data_collection"]
+	path = usv_navigation/nta_rl_data_collection
+	url = https://github.com/jasonjabbour/nta_rl_data_collection.git
